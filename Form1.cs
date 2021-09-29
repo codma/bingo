@@ -99,6 +99,36 @@ namespace bingo
             tb24.Text = UserBrands[23];
             tb25.Text = UserBrands[24];
 
+
+            tb1.BackColor = Color.White;
+            tb2.BackColor = Color.White;
+            tb3.BackColor = Color.White;
+            tb4.BackColor = Color.White;
+            tb5.BackColor = Color.White;
+            tb6.BackColor = Color.White;
+            tb7.BackColor = Color.White;
+            tb8.BackColor = Color.White;
+            tb9.BackColor = Color.White;
+            tb10.BackColor = Color.White;
+            tb11.BackColor = Color.White;
+            tb12.BackColor = Color.White;
+            tb13.BackColor = Color.White;
+            tb14.BackColor = Color.White;
+            tb15.BackColor = Color.White;
+            tb16.BackColor = Color.White;
+            tb17.BackColor = Color.White;
+            tb18.BackColor = Color.White;
+            tb19.BackColor = Color.White;
+            tb20.BackColor = Color.White;
+            tb21.BackColor = Color.White;
+            tb22.BackColor = Color.White;
+            tb23.BackColor = Color.White;
+            tb24.BackColor = Color.White;
+            tb25.BackColor = Color.White;
+
+
+
+
             tbTicket.Text = "30";
             tbBrandNameCheck.Text = "";
             tbBingoLine.Text = "0";
