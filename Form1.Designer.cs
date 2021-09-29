@@ -59,6 +59,8 @@ namespace bingo
             this.tb21 = new System.Windows.Forms.TextBox();
             this.tbBrandNameCheck = new System.Windows.Forms.TextBox();
             this.lbCheck = new System.Windows.Forms.Label();
+            this.lbCount = new System.Windows.Forms.Label();
+            this.tbTicket = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -283,11 +285,29 @@ namespace bingo
             this.lbCheck.TabIndex = 30;
             this.lbCheck.Text = "브랜드 확인";
             // 
+            // lbCount
+            // 
+            this.lbCount.AutoSize = true;
+            this.lbCount.Location = new System.Drawing.Point(261, 494);
+            this.lbCount.Name = "lbCount";
+            this.lbCount.Size = new System.Drawing.Size(122, 15);
+            this.lbCount.TabIndex = 31;
+            this.lbCount.Text = "빙고 열기 이용권";
+            // 
+            // tbTicket
+            // 
+            this.tbTicket.Location = new System.Drawing.Point(401, 491);
+            this.tbTicket.Name = "tbTicket";
+            this.tbTicket.Size = new System.Drawing.Size(100, 25);
+            this.tbTicket.TabIndex = 32;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 676);
+            this.ClientSize = new System.Drawing.Size(640, 540);
+            this.Controls.Add(this.tbTicket);
+            this.Controls.Add(this.lbCount);
             this.Controls.Add(this.lbCheck);
             this.Controls.Add(this.tbBrandNameCheck);
             this.Controls.Add(this.tb25);
@@ -357,6 +377,8 @@ namespace bingo
         private System.Windows.Forms.TextBox tb21;
         private System.Windows.Forms.TextBox tbBrandNameCheck;
         private System.Windows.Forms.Label lbCheck;
+        private System.Windows.Forms.Label lbCount;
+        private System.Windows.Forms.TextBox tbTicket;
     }
 }
 

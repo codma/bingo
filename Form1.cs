@@ -18,6 +18,9 @@ namespace bingo
             InitializeComponent();
    
             btNewBoard.Click += btNewBoard_Click;
+            btOpenCell.Click += btOpenCell_Click;
+
+            
         }
 
 
@@ -96,7 +99,7 @@ namespace bingo
             tb24.Text = UserBrands[23];
             tb25.Text = UserBrands[24];
 
-
+            tbTicket.Text = "30";
         }
 
         private void btOpenCell_Click(object sender, EventArgs e)
@@ -116,6 +119,7 @@ namespace bingo
             string randomBrand;
             List<string> UserBrands = new List<string>();
 
+            int ticketCount = 30;
             //실제로는 출석한 수만큼 횟도전 가능하며, 임시로 30번이라고 가정함
             for (int i = 0; i < 30; i++)
             {
@@ -137,7 +141,6 @@ namespace bingo
             {
                 tbBrandNameCheck.Text = UserBrands[j];
                 // 만약에 확인한 브랜드가 테이블에 있다면, 해당 칸의 색을 바꿈
-                // 로직추가필요: 한번 체크한 브랜드 이름은 UserBrands에서 제외함 (btNewBoard클릭 전까지)
                 if (tb1.Text == tbBrandNameCheck.Text)
                 {
                     tb1.BackColor = Color.Red;
@@ -238,7 +241,12 @@ namespace bingo
                 {
                     tb25.BackColor = Color.Red;
                 }
+                // 로직추가필요: 한번 체크한 브랜드 이름은 UserBrands에서 제외함 (btNewBoard클릭 전까지)
+                ticketCount--;
+                tbTicket.Text = ticketCount.ToString();
+
                 break;
+               
             }
             
         }
