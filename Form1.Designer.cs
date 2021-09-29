@@ -61,6 +61,8 @@ namespace bingo
             this.lbCheck = new System.Windows.Forms.Label();
             this.lbCount = new System.Windows.Forms.Label();
             this.tbTicket = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbBingoLine = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -86,7 +88,7 @@ namespace bingo
             // 
             // btOpenCell
             // 
-            this.btOpenCell.Location = new System.Drawing.Point(327, 536);
+            this.btOpenCell.Location = new System.Drawing.Point(440, 496);
             this.btOpenCell.Name = "btOpenCell";
             this.btOpenCell.Size = new System.Drawing.Size(121, 23);
             this.btOpenCell.TabIndex = 3;
@@ -271,7 +273,7 @@ namespace bingo
             // 
             // tbBrandNameCheck
             // 
-            this.tbBrandNameCheck.Location = new System.Drawing.Point(370, 577);
+            this.tbBrandNameCheck.Location = new System.Drawing.Point(375, 552);
             this.tbBrandNameCheck.Name = "tbBrandNameCheck";
             this.tbBrandNameCheck.Size = new System.Drawing.Size(121, 25);
             this.tbBrandNameCheck.TabIndex = 29;
@@ -279,7 +281,7 @@ namespace bingo
             // lbCheck
             // 
             this.lbCheck.AutoSize = true;
-            this.lbCheck.Location = new System.Drawing.Point(262, 580);
+            this.lbCheck.Location = new System.Drawing.Point(242, 555);
             this.lbCheck.Name = "lbCheck";
             this.lbCheck.Size = new System.Drawing.Size(87, 15);
             this.lbCheck.TabIndex = 30;
@@ -288,7 +290,7 @@ namespace bingo
             // lbCount
             // 
             this.lbCount.AutoSize = true;
-            this.lbCount.Location = new System.Drawing.Point(261, 494);
+            this.lbCount.Location = new System.Drawing.Point(157, 496);
             this.lbCount.Name = "lbCount";
             this.lbCount.Size = new System.Drawing.Size(122, 15);
             this.lbCount.TabIndex = 31;
@@ -296,16 +298,34 @@ namespace bingo
             // 
             // tbTicket
             // 
-            this.tbTicket.Location = new System.Drawing.Point(401, 491);
+            this.tbTicket.Location = new System.Drawing.Point(297, 493);
             this.tbTicket.Name = "tbTicket";
             this.tbTicket.Size = new System.Drawing.Size(100, 25);
             this.tbTicket.TabIndex = 32;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(235, 599);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 15);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "완성된 빙고줄!";
+            // 
+            // tbBingoLine
+            // 
+            this.tbBingoLine.Location = new System.Drawing.Point(375, 599);
+            this.tbBingoLine.Name = "tbBingoLine";
+            this.tbBingoLine.Size = new System.Drawing.Size(121, 25);
+            this.tbBingoLine.TabIndex = 34;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 540);
+            this.ClientSize = new System.Drawing.Size(804, 677);
+            this.Controls.Add(this.tbBingoLine);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.tbTicket);
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.lbCheck);
@@ -379,6 +399,8 @@ namespace bingo
         private System.Windows.Forms.Label lbCheck;
         private System.Windows.Forms.Label lbCount;
         private System.Windows.Forms.TextBox tbTicket;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbBingoLine;
     }
 }
 

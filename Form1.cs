@@ -100,6 +100,7 @@ namespace bingo
             tb25.Text = UserBrands[24];
 
             tbTicket.Text = "30";
+            tbBrandNameCheck.Text = "";
         }
 
         private void btOpenCell_Click(object sender, EventArgs e)
@@ -119,7 +120,7 @@ namespace bingo
             string randomBrand;
             List<string> UserBrands = new List<string>();
 
-            int ticketCount = 30;
+            
             //실제로는 출석한 수만큼 횟도전 가능하며, 임시로 30번이라고 가정함
             for (int i = 0; i < 30; i++)
             {
@@ -137,118 +138,207 @@ namespace bingo
                 }
                 UserBrands.Add(randomBrand);
             }
-            for (int j = 0; j < UserBrands.Count; j++)
+
+            List<string> UsedBrands = new List<string>();
+            int ticketCount = 30;
+            for (int j = 0; j < 30; j++)
             {
                 tbBrandNameCheck.Text = UserBrands[j];
+                ticketCount--;
+                tbTicket.Text = ticketCount.ToString();
                 // 만약에 확인한 브랜드가 테이블에 있다면, 해당 칸의 색을 바꿈
+                if (UsedBrands.Contains(UserBrands[j]))
+                {
+                    j--;
+                    continue;
+                }
                 if (tb1.Text == tbBrandNameCheck.Text)
                 {
                     tb1.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb2.Text == tbBrandNameCheck.Text)
                 {
                     tb2.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb3.Text == tbBrandNameCheck.Text)
                 {
                     tb3.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb4.Text == tbBrandNameCheck.Text)
                 {
                     tb4.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb5.Text == tbBrandNameCheck.Text)
                 {
                     tb5.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb6.Text == tbBrandNameCheck.Text)
                 {
                     tb6.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb7.Text == tbBrandNameCheck.Text)
                 {
                     tb7.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb8.Text == tbBrandNameCheck.Text)
                 {
                     tb8.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb9.Text == tbBrandNameCheck.Text)
                 {
                     tb9.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb10.Text == tbBrandNameCheck.Text)
                 {
                     tb10.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb11.Text == tbBrandNameCheck.Text)
                 {
                     tb11.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb12.Text == tbBrandNameCheck.Text)
                 {
                     tb12.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb13.Text == tbBrandNameCheck.Text)
                 {
                     tb13.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb14.Text == tbBrandNameCheck.Text)
                 {
                     tb14.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb15.Text == tbBrandNameCheck.Text)
                 {
                     tb15.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb16.Text == tbBrandNameCheck.Text)
                 {
                     tb16.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb17.Text == tbBrandNameCheck.Text)
                 {
                     tb17.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb18.Text == tbBrandNameCheck.Text)
                 {
                     tb18.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb19.Text == tbBrandNameCheck.Text)
                 {
                     tb19.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb20.Text == tbBrandNameCheck.Text)
                 {
                     tb20.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb21.Text == tbBrandNameCheck.Text)
                 {
                     tb21.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb22.Text == tbBrandNameCheck.Text)
                 {
                     tb22.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb23.Text == tbBrandNameCheck.Text)
                 {
                     tb23.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb24.Text == tbBrandNameCheck.Text)
                 {
                     tb24.BackColor = Color.Red;
+                    continue;
                 }
                 if (tb25.Text == tbBrandNameCheck.Text)
                 {
                     tb25.BackColor = Color.Red;
+                    continue;
                 }
-                // 로직추가필요: 한번 체크한 브랜드 이름은 UserBrands에서 제외함 (btNewBoard클릭 전까지)
-                ticketCount--;
-                tbTicket.Text = ticketCount.ToString();
 
-                break;
-               
+                // 로직추가필요: 한번 체크한 브랜드 이름은 UserBrands에서 제외함 (btNewBoard클릭 전까지)
+                
+              
+                UsedBrands.Add(UserBrands[j]);
             }
-            
+
+            int Bingo = 0;
+          //가로빙고완성
+            if (tb1.BackColor == Color.Red && tb2.BackColor == Color.Red && tb3.BackColor == Color.Red && tb4.BackColor == Color.Red && tb5.BackColor == Color.Red)
+            {
+                Bingo++;
+            }
+            if (tb6.BackColor == Color.Red && tb7.BackColor == Color.Red && tb8.BackColor == Color.Red && tb9.BackColor == Color.Red && tb10.BackColor == Color.Red)
+            {
+                Bingo++;
+            }
+            if (tb11.BackColor == Color.Red && tb12.BackColor == Color.Red && tb13.BackColor == Color.Red && tb14.BackColor == Color.Red && tb15.BackColor == Color.Red)
+            {
+                Bingo++;
+            }
+            if (tb16.BackColor == Color.Red && tb17.BackColor == Color.Red && tb18.BackColor == Color.Red && tb19.BackColor == Color.Red && tb20.BackColor == Color.Red)
+            {
+                Bingo++;
+            }
+            if (tb21.BackColor == Color.Red && tb22.BackColor == Color.Red && tb23.BackColor == Color.Red && tb24.BackColor == Color.Red && tb25.BackColor == Color.Red)
+            {
+                Bingo++;
+            }
+            //세로빙고완성
+            if (tb1.BackColor == Color.Red && tb6.BackColor == Color.Red && tb11.BackColor == Color.Red && tb16.BackColor == Color.Red && tb21.BackColor == Color.Red)
+            {
+                Bingo++;
+            }
+            if (tb2.BackColor == Color.Red && tb7.BackColor == Color.Red && tb12.BackColor == Color.Red && tb17.BackColor == Color.Red && tb22.BackColor == Color.Red)
+            {
+                Bingo++;
+            }
+            if (tb3.BackColor == Color.Red && tb8.BackColor == Color.Red && tb13.BackColor == Color.Red && tb18.BackColor == Color.Red && tb23.BackColor == Color.Red)
+            {
+                Bingo++;
+            }
+            if (tb4.BackColor == Color.Red && tb9.BackColor == Color.Red && tb14.BackColor == Color.Red && tb19.BackColor == Color.Red && tb24.BackColor == Color.Red)
+            {
+                Bingo++;
+            }
+            if (tb5.BackColor == Color.Red && tb10.BackColor == Color.Red && tb15.BackColor == Color.Red && tb20.BackColor == Color.Red && tb25.BackColor == Color.Red)
+            {
+                Bingo++;
+            }
+            //대각선빙고완성
+        
+            if (tb1.BackColor == Color.Red && tb7.BackColor == Color.Red && tb13.BackColor == Color.Red && tb19.BackColor == Color.Red && tb25.BackColor == Color.Red)
+            {
+                Bingo++;
+            }
+            if (tb5.BackColor == Color.Red && tb9.BackColor == Color.Red && tb13.BackColor == Color.Red && tb17.BackColor == Color.Red && tb21.BackColor == Color.Red)
+            {
+                Bingo++;
+            }
+
+            tbBingoLine.Text = Bingo.ToString();
         }
     }
 }
