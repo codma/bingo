@@ -116,7 +116,7 @@ namespace bingo
             string randomBrand;
             List<string> UserBrands = new List<string>();
 
-            //실제로는 출석한 수만큼 횟도전 가능
+            //실제로는 출석한 수만큼 횟도전 가능하며, 임시로 30번이라고 가정함
             for (int i = 0; i < 30; i++)
             {
                 pickBrand = randIndex.Next(0, 79);
@@ -136,7 +136,8 @@ namespace bingo
             for (int j = 0; j < UserBrands.Count; j++)
             {
                 tbBrandNameCheck.Text = UserBrands[j];
-
+                // 만약에 확인한 브랜드가 테이블에 있다면, 해당 칸의 색을 바꿈
+                // 로직추가필요: 한번 체크한 브랜드 이름은 UserBrands에서 제외함 (btNewBoard클릭 전까지)
                 if (tb1.Text == tbBrandNameCheck.Text)
                 {
                     tb1.BackColor = Color.Red;
