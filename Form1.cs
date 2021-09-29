@@ -101,6 +101,7 @@ namespace bingo
 
             tbTicket.Text = "30";
             tbBrandNameCheck.Text = "";
+            tbBingoLine.Text = "0";
         }
 
         private void btOpenCell_Click(object sender, EventArgs e)
