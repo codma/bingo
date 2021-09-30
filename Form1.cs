@@ -12,15 +12,15 @@ namespace bingo
 {
     public partial class Form1 : Form
     {
-        
+
         public Form1()
         {
             InitializeComponent();
-   
-            btNewBoard.Click += btNewBoard_Click;
-            btOpenCell.Click += btOpenCell_Click;
 
-            
+            //btNewBoard.Click += btNewBoard_Click;
+            //btOpenCell.Click += btOpenCell_Click;
+
+
         }
 
 
@@ -38,7 +38,7 @@ namespace bingo
         {
 
 
-           
+
 
             //80개의 브랜드목록을 랜덤으로 빙고판에 부여함
             string[] brandNames = new string[] {
@@ -131,9 +131,10 @@ namespace bingo
 
             tbTicket.Text = "30";
             tbBrandNameCheck.Text = "";
-            tbBingoLine.Text = "0";
+            tbBingoLine.Text = "";
+            
         }
-
+        int turn = 0;
         private void btOpenCell_Click(object sender, EventArgs e)
         {
             string[] brandNames = new string[] {
@@ -151,8 +152,9 @@ namespace bingo
             string randomBrand;
             List<string> UserBrands = new List<string>();
 
-            
+
             //실제로는 출석한 수만큼 횟도전 가능하며, 임시로 30번이라고 가정함
+            //랜덤브랜드 받기(미노출)
             for (int i = 0; i < 30; i++)
             {
                 pickBrand = randIndex.Next(0, 79);
@@ -170,24 +172,23 @@ namespace bingo
                 UserBrands.Add(randomBrand);
             }
 
-            List<string> UsedBrands = new List<string>();
+           // List<string> UsedBrands = new List<string>();
             int ticketCount = 30;
+
+
+            //받은 브랜드 보드판에 체크하기
             for (int j = 0; j < 30; j++)
             {
                 tbBrandNameCheck.Text = UserBrands[j];
                 ticketCount--;
                 tbTicket.Text = ticketCount.ToString();
                 // 만약에 확인한 브랜드가 테이블에 있다면, 해당 칸의 색을 바꿈
-                if (UsedBrands.Contains(UserBrands[j]))
-                {
-                    j--;
-                    continue;
-                }
-                if (tb1.Text == tbBrandNameCheck.Text)
-                {
-                    tb1.BackColor = Color.Red;
-                    continue;
-                }
+               
+                //if (tb1.Text == tbBrandNameCheck.Text)
+                //{
+                //    tb1.BackColor = Color.Red;
+                //    continue;
+                //}
                 if (tb2.Text == tbBrandNameCheck.Text)
                 {
                     tb2.BackColor = Color.Red;
@@ -310,13 +311,12 @@ namespace bingo
                 }
 
                 // 로직추가필요: 한번 체크한 브랜드 이름은 UserBrands에서 제외함 (btNewBoard클릭 전까지)
-                
-              
-                UsedBrands.Add(UserBrands[j]);
+
+                //UsedBrands.Add(UserBrands[j]);
             }
 
             int Bingo = 0;
-          //가로빙고완성
+            //가로빙고완성
             if (tb1.BackColor == Color.Red && tb2.BackColor == Color.Red && tb3.BackColor == Color.Red && tb4.BackColor == Color.Red && tb5.BackColor == Color.Red)
             {
                 Bingo++;
@@ -359,7 +359,6 @@ namespace bingo
                 Bingo++;
             }
             //대각선빙고완성
-        
             if (tb1.BackColor == Color.Red && tb7.BackColor == Color.Red && tb13.BackColor == Color.Red && tb19.BackColor == Color.Red && tb25.BackColor == Color.Red)
             {
                 Bingo++;
@@ -370,6 +369,8 @@ namespace bingo
             }
 
             tbBingoLine.Text = Bingo.ToString();
+            turn++;
+            EventLog.Items.Add(turn + "회차/브랜드(80개중) 30번 시도 시 완성된 빙고줄 :" + Bingo.ToString());
         }
     }
 }
