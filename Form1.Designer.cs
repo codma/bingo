@@ -1,7 +1,7 @@
 ﻿
 namespace bingo
 {
-    partial class Form1
+    partial class btCopyLog
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -65,6 +65,9 @@ namespace bingo
             this.tbBingoLine = new System.Windows.Forms.TextBox();
             this.EventLog = new System.Windows.Forms.ListBox();
             this.btTest = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbSetTotalPlay = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -80,7 +83,7 @@ namespace bingo
             // 
             // btNewBoard
             // 
-            this.btNewBoard.Location = new System.Drawing.Point(293, 76);
+            this.btNewBoard.Location = new System.Drawing.Point(565, 140);
             this.btNewBoard.Name = "btNewBoard";
             this.btNewBoard.Size = new System.Drawing.Size(172, 23);
             this.btNewBoard.TabIndex = 1;
@@ -90,7 +93,7 @@ namespace bingo
             // 
             // btOpenCell
             // 
-            this.btOpenCell.Location = new System.Drawing.Point(479, 318);
+            this.btOpenCell.Location = new System.Drawing.Point(313, 390);
             this.btOpenCell.Name = "btOpenCell";
             this.btOpenCell.Size = new System.Drawing.Size(121, 23);
             this.btOpenCell.TabIndex = 3;
@@ -100,182 +103,182 @@ namespace bingo
             // 
             // tb1
             // 
-            this.tb1.Location = new System.Drawing.Point(63, 128);
+            this.tb1.Location = new System.Drawing.Point(63, 194);
             this.tb1.Name = "tb1";
             this.tb1.Size = new System.Drawing.Size(130, 25);
             this.tb1.TabIndex = 4;
             // 
             // tb2
             // 
-            this.tb2.Location = new System.Drawing.Point(199, 128);
+            this.tb2.Location = new System.Drawing.Point(199, 194);
             this.tb2.Name = "tb2";
             this.tb2.Size = new System.Drawing.Size(130, 25);
             this.tb2.TabIndex = 5;
             // 
             // tb3
             // 
-            this.tb3.Location = new System.Drawing.Point(335, 128);
+            this.tb3.Location = new System.Drawing.Point(335, 194);
             this.tb3.Name = "tb3";
             this.tb3.Size = new System.Drawing.Size(130, 25);
             this.tb3.TabIndex = 6;
             // 
             // tb4
             // 
-            this.tb4.Location = new System.Drawing.Point(471, 128);
+            this.tb4.Location = new System.Drawing.Point(471, 194);
             this.tb4.Name = "tb4";
             this.tb4.Size = new System.Drawing.Size(130, 25);
             this.tb4.TabIndex = 7;
             // 
             // tb5
             // 
-            this.tb5.Location = new System.Drawing.Point(607, 128);
+            this.tb5.Location = new System.Drawing.Point(607, 194);
             this.tb5.Name = "tb5";
             this.tb5.Size = new System.Drawing.Size(130, 25);
             this.tb5.TabIndex = 8;
             // 
             // tb10
             // 
-            this.tb10.Location = new System.Drawing.Point(607, 159);
+            this.tb10.Location = new System.Drawing.Point(607, 225);
             this.tb10.Name = "tb10";
             this.tb10.Size = new System.Drawing.Size(130, 25);
             this.tb10.TabIndex = 13;
             // 
             // tb9
             // 
-            this.tb9.Location = new System.Drawing.Point(471, 159);
+            this.tb9.Location = new System.Drawing.Point(471, 225);
             this.tb9.Name = "tb9";
             this.tb9.Size = new System.Drawing.Size(130, 25);
             this.tb9.TabIndex = 12;
             // 
             // tb8
             // 
-            this.tb8.Location = new System.Drawing.Point(335, 159);
+            this.tb8.Location = new System.Drawing.Point(335, 225);
             this.tb8.Name = "tb8";
             this.tb8.Size = new System.Drawing.Size(130, 25);
             this.tb8.TabIndex = 11;
             // 
             // tb7
             // 
-            this.tb7.Location = new System.Drawing.Point(199, 159);
+            this.tb7.Location = new System.Drawing.Point(199, 225);
             this.tb7.Name = "tb7";
             this.tb7.Size = new System.Drawing.Size(130, 25);
             this.tb7.TabIndex = 10;
             // 
             // tb6
             // 
-            this.tb6.Location = new System.Drawing.Point(64, 158);
+            this.tb6.Location = new System.Drawing.Point(64, 224);
             this.tb6.Name = "tb6";
             this.tb6.Size = new System.Drawing.Size(130, 25);
             this.tb6.TabIndex = 9;
             // 
             // tb15
             // 
-            this.tb15.Location = new System.Drawing.Point(607, 190);
+            this.tb15.Location = new System.Drawing.Point(607, 256);
             this.tb15.Name = "tb15";
             this.tb15.Size = new System.Drawing.Size(130, 25);
             this.tb15.TabIndex = 18;
             // 
             // tb14
             // 
-            this.tb14.Location = new System.Drawing.Point(471, 190);
+            this.tb14.Location = new System.Drawing.Point(471, 256);
             this.tb14.Name = "tb14";
             this.tb14.Size = new System.Drawing.Size(130, 25);
             this.tb14.TabIndex = 17;
             // 
             // tb13
             // 
-            this.tb13.Location = new System.Drawing.Point(335, 190);
+            this.tb13.Location = new System.Drawing.Point(335, 256);
             this.tb13.Name = "tb13";
             this.tb13.Size = new System.Drawing.Size(130, 25);
             this.tb13.TabIndex = 16;
             // 
             // tb12
             // 
-            this.tb12.Location = new System.Drawing.Point(199, 190);
+            this.tb12.Location = new System.Drawing.Point(199, 256);
             this.tb12.Name = "tb12";
             this.tb12.Size = new System.Drawing.Size(130, 25);
             this.tb12.TabIndex = 15;
             // 
             // tb11
             // 
-            this.tb11.Location = new System.Drawing.Point(63, 190);
+            this.tb11.Location = new System.Drawing.Point(63, 256);
             this.tb11.Name = "tb11";
             this.tb11.Size = new System.Drawing.Size(130, 25);
             this.tb11.TabIndex = 14;
             // 
             // tb20
             // 
-            this.tb20.Location = new System.Drawing.Point(607, 221);
+            this.tb20.Location = new System.Drawing.Point(607, 287);
             this.tb20.Name = "tb20";
             this.tb20.Size = new System.Drawing.Size(130, 25);
             this.tb20.TabIndex = 23;
             // 
             // tb19
             // 
-            this.tb19.Location = new System.Drawing.Point(471, 221);
+            this.tb19.Location = new System.Drawing.Point(471, 287);
             this.tb19.Name = "tb19";
             this.tb19.Size = new System.Drawing.Size(130, 25);
             this.tb19.TabIndex = 22;
             // 
             // tb18
             // 
-            this.tb18.Location = new System.Drawing.Point(335, 221);
+            this.tb18.Location = new System.Drawing.Point(335, 287);
             this.tb18.Name = "tb18";
             this.tb18.Size = new System.Drawing.Size(130, 25);
             this.tb18.TabIndex = 21;
             // 
             // tb17
             // 
-            this.tb17.Location = new System.Drawing.Point(199, 221);
+            this.tb17.Location = new System.Drawing.Point(199, 287);
             this.tb17.Name = "tb17";
             this.tb17.Size = new System.Drawing.Size(130, 25);
             this.tb17.TabIndex = 20;
             // 
             // tb16
             // 
-            this.tb16.Location = new System.Drawing.Point(63, 221);
+            this.tb16.Location = new System.Drawing.Point(63, 287);
             this.tb16.Name = "tb16";
             this.tb16.Size = new System.Drawing.Size(130, 25);
             this.tb16.TabIndex = 19;
             // 
             // tb25
             // 
-            this.tb25.Location = new System.Drawing.Point(607, 252);
+            this.tb25.Location = new System.Drawing.Point(607, 318);
             this.tb25.Name = "tb25";
             this.tb25.Size = new System.Drawing.Size(130, 25);
             this.tb25.TabIndex = 28;
             // 
             // tb24
             // 
-            this.tb24.Location = new System.Drawing.Point(471, 252);
+            this.tb24.Location = new System.Drawing.Point(471, 318);
             this.tb24.Name = "tb24";
             this.tb24.Size = new System.Drawing.Size(130, 25);
             this.tb24.TabIndex = 27;
             // 
             // tb23
             // 
-            this.tb23.Location = new System.Drawing.Point(335, 252);
+            this.tb23.Location = new System.Drawing.Point(335, 318);
             this.tb23.Name = "tb23";
             this.tb23.Size = new System.Drawing.Size(130, 25);
             this.tb23.TabIndex = 26;
             // 
             // tb22
             // 
-            this.tb22.Location = new System.Drawing.Point(199, 252);
+            this.tb22.Location = new System.Drawing.Point(199, 318);
             this.tb22.Name = "tb22";
             this.tb22.Size = new System.Drawing.Size(130, 25);
             this.tb22.TabIndex = 25;
             // 
             // tb21
             // 
-            this.tb21.Location = new System.Drawing.Point(63, 252);
+            this.tb21.Location = new System.Drawing.Point(63, 318);
             this.tb21.Name = "tb21";
             this.tb21.Size = new System.Drawing.Size(130, 25);
             this.tb21.TabIndex = 24;
             // 
             // tbBrandNameCheck
             // 
-            this.tbBrandNameCheck.Location = new System.Drawing.Point(414, 374);
+            this.tbBrandNameCheck.Location = new System.Drawing.Point(616, 367);
             this.tbBrandNameCheck.Name = "tbBrandNameCheck";
             this.tbBrandNameCheck.Size = new System.Drawing.Size(121, 25);
             this.tbBrandNameCheck.TabIndex = 29;
@@ -283,7 +286,7 @@ namespace bingo
             // lbCheck
             // 
             this.lbCheck.AutoSize = true;
-            this.lbCheck.Location = new System.Drawing.Point(281, 377);
+            this.lbCheck.Location = new System.Drawing.Point(483, 370);
             this.lbCheck.Name = "lbCheck";
             this.lbCheck.Size = new System.Drawing.Size(87, 15);
             this.lbCheck.TabIndex = 30;
@@ -292,15 +295,15 @@ namespace bingo
             // lbCount
             // 
             this.lbCount.AutoSize = true;
-            this.lbCount.Location = new System.Drawing.Point(196, 318);
+            this.lbCount.Location = new System.Drawing.Point(59, 393);
             this.lbCount.Name = "lbCount";
             this.lbCount.Size = new System.Drawing.Size(122, 15);
             this.lbCount.TabIndex = 31;
-            this.lbCount.Text = "빙고 열기 이용권";
+            this.lbCount.Text = "남은 빙고 이용권";
             // 
             // tbTicket
             // 
-            this.tbTicket.Location = new System.Drawing.Point(336, 315);
+            this.tbTicket.Location = new System.Drawing.Point(199, 390);
             this.tbTicket.Name = "tbTicket";
             this.tbTicket.Size = new System.Drawing.Size(100, 25);
             this.tbTicket.TabIndex = 32;
@@ -308,7 +311,7 @@ namespace bingo
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(274, 421);
+            this.label2.Location = new System.Drawing.Point(476, 414);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 15);
             this.label2.TabIndex = 33;
@@ -316,7 +319,7 @@ namespace bingo
             // 
             // tbBingoLine
             // 
-            this.tbBingoLine.Location = new System.Drawing.Point(414, 421);
+            this.tbBingoLine.Location = new System.Drawing.Point(616, 414);
             this.tbBingoLine.Name = "tbBingoLine";
             this.tbBingoLine.Size = new System.Drawing.Size(121, 25);
             this.tbBingoLine.TabIndex = 34;
@@ -325,26 +328,55 @@ namespace bingo
             // 
             this.EventLog.FormattingEnabled = true;
             this.EventLog.ItemHeight = 15;
-            this.EventLog.Location = new System.Drawing.Point(43, 488);
+            this.EventLog.Location = new System.Drawing.Point(62, 480);
             this.EventLog.Name = "EventLog";
-            this.EventLog.Size = new System.Drawing.Size(736, 169);
+            this.EventLog.Size = new System.Drawing.Size(675, 169);
             this.EventLog.TabIndex = 35;
             // 
             // btTest
             // 
-            this.btTest.Location = new System.Drawing.Point(24, 33);
+            this.btTest.Location = new System.Drawing.Point(565, 111);
             this.btTest.Name = "btTest";
-            this.btTest.Size = new System.Drawing.Size(150, 23);
+            this.btTest.Size = new System.Drawing.Size(172, 23);
             this.btTest.TabIndex = 36;
             this.btTest.Text = "100회 테스트";
             this.btTest.UseVisualStyleBackColor = true;
             this.btTest.Click += new System.EventHandler(this.btTest_Click);
             // 
-            // Form1
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(62, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 15);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "빙고 이용권 부여";
+            // 
+            // tbSetTotalPlay
+            // 
+            this.tbSetTotalPlay.Location = new System.Drawing.Point(220, 112);
+            this.tbSetTotalPlay.Name = "tbSetTotalPlay";
+            this.tbSetTotalPlay.Size = new System.Drawing.Size(100, 25);
+            this.tbSetTotalPlay.TabIndex = 38;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(594, 655);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 23);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Clipboard(log)";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btCopyLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 677);
+            this.ClientSize = new System.Drawing.Size(804, 714);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tbSetTotalPlay);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btTest);
             this.Controls.Add(this.EventLog);
             this.Controls.Add(this.tbBingoLine);
@@ -381,7 +413,7 @@ namespace bingo
             this.Controls.Add(this.btOpenCell);
             this.Controls.Add(this.btNewBoard);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "btCopyLog";
             this.Text = "Brand Bingo";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -426,6 +458,9 @@ namespace bingo
         private System.Windows.Forms.TextBox tbBingoLine;
         private System.Windows.Forms.ListBox EventLog;
         private System.Windows.Forms.Button btTest;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbSetTotalPlay;
+        private System.Windows.Forms.Button button1;
     }
 }
 
