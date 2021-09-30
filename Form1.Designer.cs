@@ -64,6 +64,7 @@ namespace bingo
             this.label2 = new System.Windows.Forms.Label();
             this.tbBingoLine = new System.Windows.Forms.TextBox();
             this.EventLog = new System.Windows.Forms.ListBox();
+            this.btTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -79,7 +80,7 @@ namespace bingo
             // 
             // btNewBoard
             // 
-            this.btNewBoard.Location = new System.Drawing.Point(479, 289);
+            this.btNewBoard.Location = new System.Drawing.Point(293, 76);
             this.btNewBoard.Name = "btNewBoard";
             this.btNewBoard.Size = new System.Drawing.Size(172, 23);
             this.btNewBoard.TabIndex = 1;
@@ -329,11 +330,22 @@ namespace bingo
             this.EventLog.Size = new System.Drawing.Size(736, 169);
             this.EventLog.TabIndex = 35;
             // 
+            // btTest
+            // 
+            this.btTest.Location = new System.Drawing.Point(24, 33);
+            this.btTest.Name = "btTest";
+            this.btTest.Size = new System.Drawing.Size(150, 23);
+            this.btTest.TabIndex = 36;
+            this.btTest.Text = "100회 테스트";
+            this.btTest.UseVisualStyleBackColor = true;
+            this.btTest.Click += new System.EventHandler(this.btTest_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 677);
+            this.Controls.Add(this.btTest);
             this.Controls.Add(this.EventLog);
             this.Controls.Add(this.tbBingoLine);
             this.Controls.Add(this.label2);
@@ -413,6 +425,7 @@ namespace bingo
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbBingoLine;
         private System.Windows.Forms.ListBox EventLog;
+        private System.Windows.Forms.Button btTest;
     }
 }
 
