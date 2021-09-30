@@ -24,7 +24,7 @@ namespace bingo
 
         }
 
-        int setTotalBrands = 50;
+        int setTotalBrands = 35;
         private void btNewBoard_Click(object sender, EventArgs e)
         {
 
@@ -151,11 +151,11 @@ namespace bingo
                 tbTicket.Text = ticketCount.ToString();
                 // 만약에 확인한 브랜드가 테이블에 있다면, 해당 칸의 색을 바꿈
 
-                //if (tb1.Text == tbBrandNameCheck.Text)
-                //{
-                //    tb1.BackColor = Color.Red;
-                //    continue;
-                //}
+                if (tb1.Text == tbBrandNameCheck.Text)
+                {
+                    tb1.BackColor = Color.Red;
+                    continue;
+                }
                 if (tb2.Text == tbBrandNameCheck.Text)
                 {
                     tb2.BackColor = Color.Red;
@@ -337,7 +337,7 @@ namespace bingo
 
             tbBingoLine.Text = Bingo.ToString();
             turn++;
-            EventLog.Items.Add(turn + "회차/브랜드(" + setTotalBrands + "개 중)" + tbSetTotalPlay.Text + "번 시도 시 완성된 빙고줄 :" + Bingo.ToString());
+            EventLog.Items.Add(turn + "회차/브랜드(" + setTotalBrands + "개) 중" + tbSetTotalPlay.Text + "번 시도 시 완성된 빙고줄 :" + Bingo.ToString());
         }
         private void colorReset()
         {
@@ -380,17 +380,12 @@ namespace bingo
                 Thread.Sleep(15);
                 btOpenCell_Click(null, null);
 
-                StringBuilder sb = new StringBuilder();
-
-                foreach (var item in EventLog.Items)
-                {
-                    sb.Append(item.ToString() + "\n");
-                }
-
-                Clipboard.SetText(sb.ToString());
+              
             }
         }
 
+
+        //로그 카피
         private void button1_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();
