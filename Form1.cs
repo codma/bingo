@@ -24,77 +24,82 @@ namespace bingo
 
         }
 
-        int setTotalBrands = 35;
+        int setTotalBrands = 25;
+
+        private static Random rng = new Random();
+        List<string> brandNames = new List<string> {
+                "구찌" ,"에르메스","고야드","프라다","생로랑","버버리","코스","나이키","메종키츠네"
+                ,"스톤아일랜드","홀리넘버세븐","라메레이","프롬웨얼","바이바이섭","리이","노이어","브르아시스","헤이","아르테미데"
+                ,"빕","앤트레디션","드롱기","피암","SK2","바이레도" };
+        //"라메르","에스티로더","조말론","지방시","아미","폴로랄프로렌","아크네스튜디오","비비안웨스트우드","톰브라운","띠어리","산드로","마쥬","아페쎄","딥티크"
+        //   ,"메종마르지엘라","디올","몽클레어","보테가베네타","발렌시아가","펜디","르메르","마르니","코치","마이클코어스"
+        //   ,"티파니앤코","페라가모","셀린느","막스마라","알렉산더맥퀸","발렌티노","몽블랑","이자벨마랑","골든구스","미우미우"
+        //   ,"토리버치","무스너클","끌로에","오프화이트","로에베","겐조","로저비비에","질샌더","토즈","멀버리"
+        //   ,"톰포드","가니","지미추","꼼데가르송","마크제이콥스","쟈딕앤볼테르","폴스미스","스튜어트와이츠먼","닐바렛","아르켓"
         private void btNewBoard_Click(object sender, EventArgs e)
         {
 
 
-
-
             //80개의 브랜드목록을 랜덤으로 빙고판에 부여함
-            string[] brandNames = new string[] {
-                "구찌" ,"에르메스","고야드","프라다","생로랑","버버리","코스","나이키","메종키츠네"
-                ,"스톤아일랜드","홀리넘버세븐","라메레이","프롬웨얼","바이바이섭","리이","노이어","브르아시스","헤이","아르테미데"
-                ,"빕","앤드레디션","드롱기","피암","SK2","바이레도","라메르","에스티로더","조말론","지방시"
-                ,"아미","폴로랄프로렌","아크네스튜디오","비비안웨스트우드","톰브라운","띠어리","산드로","마쥬","아페쎄","딥티크"
-                ,"메종마르지엘라","디올","몽클레어","보테가베네타","발렌시아가","펜디","르메르","마르니","코치","마이클코어스"
-                ,"티파니앤코","페라가모","셀린느","막스마라","알렉산더맥퀸","발렌티노","몽블랑","이자벨마랑","골든구스","미우미우"
-                ,"토리버치","무스너클","끌로에","오프화이트","로에베","겐조","로저비비에","질샌더","토즈","멀버리"
-                ,"톰포드","가니","지미추","꼼데가르송","마크제이콥스","쟈딕앤볼테르","폴스미스","스튜어트와이츠먼","닐바렛","아르켓"};
-
-            Random randIndex = new Random();
-            int pickBrand;
-            string randomBrand;
-            List<string> UserBrands = new List<string>();
+            
            
 
-            for (int i = 0; i < 25; i++)
-            {
-                pickBrand = randIndex.Next(0, setTotalBrands);
-                randomBrand = brandNames[pickBrand];
-                if (UserBrands.Count == 0)
-                {
-                    UserBrands.Add(randomBrand);
-                    continue;
-                }
-                if (UserBrands.Contains(randomBrand))
-                {
-                    i--;
-                    continue;
-                }
-                UserBrands.Add(randomBrand);
-            }
 
-            tb1.Text = UserBrands[0];
-            tb2.Text = UserBrands[1];
-            tb3.Text = UserBrands[2];
-            tb4.Text = UserBrands[3];
-            tb5.Text = UserBrands[4];
-            tb6.Text = UserBrands[5];
-            tb7.Text = UserBrands[6];
-            tb8.Text = UserBrands[7];
-            tb9.Text = UserBrands[8];
-            tb10.Text = UserBrands[9];
-            tb11.Text = UserBrands[10];
-            tb12.Text = UserBrands[11];
-            tb13.Text = UserBrands[12];
-            tb14.Text = UserBrands[13];
-            tb15.Text = UserBrands[14];
-            tb16.Text = UserBrands[15];
-            tb17.Text = UserBrands[16];
-            tb18.Text = UserBrands[17];
-            tb19.Text = UserBrands[18];
-            tb20.Text = UserBrands[19];
-            tb21.Text = UserBrands[20];
-            tb22.Text = UserBrands[21];
-            tb23.Text = UserBrands[22];
-            tb24.Text = UserBrands[23];
-            tb25.Text = UserBrands[24];
+            //brandNames.Sort((a, b) => new Random().NextDouble() >= 0.5 ? 1 : -1);
 
+            //int pickBrand;
+            //string randomBrand;
+            List<string> UserBrands = new List<string>();
+            //var shuffledcards = brandNames.OrderBy(a => Guid.NewGuid()).ToList();
+
+            var shuffledcards = brandNames.OrderBy(a => rng.Next()).ToList();
+            //for ( int i = 0; i < brandNames.Count; i++)
+            //{
+            //    pickBrand = randIndex.Next(0, 24);
+
+            //    randomBrand = brandNames[pickBrand];
+            //    //if (UserBrands.Count == 0)
+            //    //{
+            //    //    UserBrands.Add(randomBrand);
+
+            //    //    continue;
+            //    //}
+            //    if (UserBrands.Contains(randomBrand))
+            //    {
+            //        i--;
+            //        continue;
+            //    }
+            //    UserBrands.Add(randomBrand);
+
+            //}
+
+            tb1.Text = shuffledcards[0];
+            tb2.Text = shuffledcards[1];
+            tb3.Text = shuffledcards[2];
+            tb4.Text = shuffledcards[3];
+            tb5.Text = shuffledcards[4];
+            tb6.Text = shuffledcards[5];
+            tb7.Text = shuffledcards[6];
+            tb8.Text = shuffledcards[7];
+            tb9.Text = shuffledcards[8];
+            tb10.Text = shuffledcards[9];
+            tb11.Text = shuffledcards[10];
+            tb12.Text = shuffledcards[11];
+            tb13.Text = shuffledcards[12];
+            tb14.Text = shuffledcards[13];
+            tb15.Text = shuffledcards[14];
+            tb16.Text = shuffledcards[15];
+            tb17.Text = shuffledcards[16];
+            tb18.Text = shuffledcards[17];
+            tb19.Text = shuffledcards[18];
+            tb20.Text = shuffledcards[19];
+            tb21.Text = shuffledcards[20];
+            tb22.Text = shuffledcards[21];
+            tb23.Text = shuffledcards[22];
+            tb24.Text = shuffledcards[23];
+            tb25.Text = shuffledcards[24];
 
             colorReset();
-
-
 
 
             tbTicket.Text = tbSetTotalPlay.Text;
@@ -104,41 +109,15 @@ namespace bingo
         }
         private void btOpenCell_Click(object sender, EventArgs e)
         {
-            string[] brandNames = new string[] {
-                "구찌" ,"에르메스","고야드","프라다","생로랑","버버리","코스","나이키","메종키츠네"
-                ,"스톤아일랜드","홀리넘버세븐","라메레이","프롬웨얼","바이바이섭","리이","노이어","브르아시스","헤이","아르테미데"
-                ,"빕","앤드레디션","드롱기","피암","SK2","바이레도","라메르","에스티로더","조말론","지방시"
-                ,"아미","폴로랄프로렌","아크네스튜디오","비비안웨스트우드","톰브라운","띠어리","산드로","마쥬","아페쎄","딥티크"
-                ,"메종마르지엘라","디올","몽클레어","보테가베네타","발렌시아가","펜디","르메르","마르니","코치","마이클코어스"
-                ,"티파니앤코","페라가모","셀린느","막스마라","알렉산더맥퀸","발렌티노","몽블랑","이자벨마랑","골든구스","미우미우"
-                ,"토리버치","무스너클","끌로에","오프화이트","로에베","겐조","로저비비에","질샌더","토즈","멀버리"
-                ,"톰포드","가니","지미추","꼼데가르송","마크제이콥스","쟈딕앤볼테르","폴스미스","스튜어트와이츠먼","닐바렛","아르켓"};
-
-            Random randIndex = new Random();
-            int pickBrand;
-            string randomBrand;
+            
+            
+            //int pickBrand;
+            //string randomBrand;
             List<string> UserBrands = new List<string>();
-           
 
-            //실제로는 출석한 수만큼 횟도전 가능하며, 임시로 30번이라고 가정함
-            //랜덤브랜드 받기(미노출)
-            for (int i = 0; i < int.Parse(tbSetTotalPlay.Text); i++)
-            {
-                pickBrand = randIndex.Next(0, setTotalBrands);
-                randomBrand = brandNames[pickBrand];
-                if (UserBrands.Count == 0)
-                {
-                    UserBrands.Add(randomBrand);
-                    continue;
-                }
-                if (UserBrands.Contains(randomBrand))
-                {
-                    i--;
-                    continue;
-                }
-                UserBrands.Add(randomBrand);
-            }
 
+            var shuffledcards = brandNames.OrderBy(a => rng.Next()).ToList();
+            UserBrands = shuffledcards;
             // List<string> UsedBrands = new List<string>();
             int ticketCount = int.Parse(tbSetTotalPlay.Text);
 
@@ -368,19 +347,19 @@ namespace bingo
             tb25.BackColor = Color.White;
         }
         int turn = 0;
-        
+
 
         private void btTest_Click(object sender, EventArgs e)
         {
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 500; i++)
             {
 
                 btNewBoard_Click(null, null);
                 Thread.Sleep(15);
                 btOpenCell_Click(null, null);
 
-              
+
             }
         }
 
