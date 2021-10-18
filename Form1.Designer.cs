@@ -1,7 +1,7 @@
 ﻿
 namespace bingo
 {
-    partial class btCopyLog
+    partial class mainForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -47,16 +47,7 @@ namespace bingo
             this.tb13 = new System.Windows.Forms.TextBox();
             this.tb12 = new System.Windows.Forms.TextBox();
             this.tb11 = new System.Windows.Forms.TextBox();
-            this.tb20 = new System.Windows.Forms.TextBox();
-            this.tb19 = new System.Windows.Forms.TextBox();
-            this.tb18 = new System.Windows.Forms.TextBox();
-            this.tb17 = new System.Windows.Forms.TextBox();
             this.tb16 = new System.Windows.Forms.TextBox();
-            this.tb25 = new System.Windows.Forms.TextBox();
-            this.tb24 = new System.Windows.Forms.TextBox();
-            this.tb23 = new System.Windows.Forms.TextBox();
-            this.tb22 = new System.Windows.Forms.TextBox();
-            this.tb21 = new System.Windows.Forms.TextBox();
             this.tbBrandNameCheck = new System.Windows.Forms.TextBox();
             this.lbCheck = new System.Windows.Forms.Label();
             this.lbCount = new System.Windows.Forms.Label();
@@ -68,6 +59,9 @@ namespace bingo
             this.label3 = new System.Windows.Forms.Label();
             this.tbSetTotalPlay = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnLogReset = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbTotalBrands = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -107,6 +101,7 @@ namespace bingo
             this.tb1.Name = "tb1";
             this.tb1.Size = new System.Drawing.Size(130, 25);
             this.tb1.TabIndex = 4;
+            this.tb1.Tag = "1";
             // 
             // tb2
             // 
@@ -114,6 +109,7 @@ namespace bingo
             this.tb2.Name = "tb2";
             this.tb2.Size = new System.Drawing.Size(130, 25);
             this.tb2.TabIndex = 5;
+            this.tb2.Tag = "2";
             // 
             // tb3
             // 
@@ -121,6 +117,7 @@ namespace bingo
             this.tb3.Name = "tb3";
             this.tb3.Size = new System.Drawing.Size(130, 25);
             this.tb3.TabIndex = 6;
+            this.tb3.Tag = "3";
             // 
             // tb4
             // 
@@ -128,153 +125,103 @@ namespace bingo
             this.tb4.Name = "tb4";
             this.tb4.Size = new System.Drawing.Size(130, 25);
             this.tb4.TabIndex = 7;
+            this.tb4.Tag = "4";
             // 
             // tb5
             // 
-            this.tb5.Location = new System.Drawing.Point(607, 194);
+            this.tb5.Location = new System.Drawing.Point(65, 225);
             this.tb5.Name = "tb5";
             this.tb5.Size = new System.Drawing.Size(130, 25);
             this.tb5.TabIndex = 8;
+            this.tb5.Tag = "5";
             // 
             // tb10
             // 
-            this.tb10.Location = new System.Drawing.Point(607, 225);
+            this.tb10.Location = new System.Drawing.Point(201, 256);
             this.tb10.Name = "tb10";
             this.tb10.Size = new System.Drawing.Size(130, 25);
             this.tb10.TabIndex = 13;
+            this.tb10.Tag = "10";
             // 
             // tb9
             // 
-            this.tb9.Location = new System.Drawing.Point(471, 225);
+            this.tb9.Location = new System.Drawing.Point(65, 256);
             this.tb9.Name = "tb9";
             this.tb9.Size = new System.Drawing.Size(130, 25);
             this.tb9.TabIndex = 12;
+            this.tb9.Tag = "9";
             // 
             // tb8
             // 
-            this.tb8.Location = new System.Drawing.Point(335, 225);
+            this.tb8.Location = new System.Drawing.Point(471, 225);
             this.tb8.Name = "tb8";
             this.tb8.Size = new System.Drawing.Size(130, 25);
             this.tb8.TabIndex = 11;
+            this.tb8.Tag = "8";
             // 
             // tb7
             // 
-            this.tb7.Location = new System.Drawing.Point(199, 225);
+            this.tb7.Location = new System.Drawing.Point(335, 225);
             this.tb7.Name = "tb7";
             this.tb7.Size = new System.Drawing.Size(130, 25);
             this.tb7.TabIndex = 10;
+            this.tb7.Tag = "7";
             // 
             // tb6
             // 
-            this.tb6.Location = new System.Drawing.Point(64, 224);
+            this.tb6.Location = new System.Drawing.Point(200, 224);
             this.tb6.Name = "tb6";
             this.tb6.Size = new System.Drawing.Size(130, 25);
             this.tb6.TabIndex = 9;
+            this.tb6.Tag = "6";
             // 
             // tb15
             // 
-            this.tb15.Location = new System.Drawing.Point(607, 256);
+            this.tb15.Location = new System.Drawing.Point(337, 287);
             this.tb15.Name = "tb15";
             this.tb15.Size = new System.Drawing.Size(130, 25);
             this.tb15.TabIndex = 18;
+            this.tb15.Tag = "15";
             // 
             // tb14
             // 
-            this.tb14.Location = new System.Drawing.Point(471, 256);
+            this.tb14.Location = new System.Drawing.Point(201, 287);
             this.tb14.Name = "tb14";
             this.tb14.Size = new System.Drawing.Size(130, 25);
             this.tb14.TabIndex = 17;
+            this.tb14.Tag = "14";
             // 
             // tb13
             // 
-            this.tb13.Location = new System.Drawing.Point(335, 256);
+            this.tb13.Location = new System.Drawing.Point(65, 287);
             this.tb13.Name = "tb13";
             this.tb13.Size = new System.Drawing.Size(130, 25);
             this.tb13.TabIndex = 16;
+            this.tb13.Tag = "13";
             // 
             // tb12
             // 
-            this.tb12.Location = new System.Drawing.Point(199, 256);
+            this.tb12.Location = new System.Drawing.Point(471, 256);
             this.tb12.Name = "tb12";
             this.tb12.Size = new System.Drawing.Size(130, 25);
             this.tb12.TabIndex = 15;
+            this.tb12.Tag = "12";
             // 
             // tb11
             // 
-            this.tb11.Location = new System.Drawing.Point(63, 256);
+            this.tb11.Location = new System.Drawing.Point(335, 256);
             this.tb11.Name = "tb11";
             this.tb11.Size = new System.Drawing.Size(130, 25);
             this.tb11.TabIndex = 14;
-            // 
-            // tb20
-            // 
-            this.tb20.Location = new System.Drawing.Point(607, 287);
-            this.tb20.Name = "tb20";
-            this.tb20.Size = new System.Drawing.Size(130, 25);
-            this.tb20.TabIndex = 23;
-            // 
-            // tb19
-            // 
-            this.tb19.Location = new System.Drawing.Point(471, 287);
-            this.tb19.Name = "tb19";
-            this.tb19.Size = new System.Drawing.Size(130, 25);
-            this.tb19.TabIndex = 22;
-            // 
-            // tb18
-            // 
-            this.tb18.Location = new System.Drawing.Point(335, 287);
-            this.tb18.Name = "tb18";
-            this.tb18.Size = new System.Drawing.Size(130, 25);
-            this.tb18.TabIndex = 21;
-            // 
-            // tb17
-            // 
-            this.tb17.Location = new System.Drawing.Point(199, 287);
-            this.tb17.Name = "tb17";
-            this.tb17.Size = new System.Drawing.Size(130, 25);
-            this.tb17.TabIndex = 20;
+            this.tb11.Tag = "11";
             // 
             // tb16
             // 
-            this.tb16.Location = new System.Drawing.Point(63, 287);
+            this.tb16.Location = new System.Drawing.Point(473, 287);
             this.tb16.Name = "tb16";
             this.tb16.Size = new System.Drawing.Size(130, 25);
             this.tb16.TabIndex = 19;
-            // 
-            // tb25
-            // 
-            this.tb25.Location = new System.Drawing.Point(607, 318);
-            this.tb25.Name = "tb25";
-            this.tb25.Size = new System.Drawing.Size(130, 25);
-            this.tb25.TabIndex = 28;
-            // 
-            // tb24
-            // 
-            this.tb24.Location = new System.Drawing.Point(471, 318);
-            this.tb24.Name = "tb24";
-            this.tb24.Size = new System.Drawing.Size(130, 25);
-            this.tb24.TabIndex = 27;
-            // 
-            // tb23
-            // 
-            this.tb23.Location = new System.Drawing.Point(335, 318);
-            this.tb23.Name = "tb23";
-            this.tb23.Size = new System.Drawing.Size(130, 25);
-            this.tb23.TabIndex = 26;
-            // 
-            // tb22
-            // 
-            this.tb22.Location = new System.Drawing.Point(199, 318);
-            this.tb22.Name = "tb22";
-            this.tb22.Size = new System.Drawing.Size(130, 25);
-            this.tb22.TabIndex = 25;
-            // 
-            // tb21
-            // 
-            this.tb21.Location = new System.Drawing.Point(63, 318);
-            this.tb21.Name = "tb21";
-            this.tb21.Size = new System.Drawing.Size(130, 25);
-            this.tb21.TabIndex = 24;
+            this.tb16.Tag = "16";
             // 
             // tbBrandNameCheck
             // 
@@ -361,7 +308,7 @@ namespace bingo
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(594, 655);
+            this.button1.Location = new System.Drawing.Point(471, 655);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 23);
             this.button1.TabIndex = 39;
@@ -369,11 +316,40 @@ namespace bingo
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btCopyLog
+            // btnLogReset
+            // 
+            this.btnLogReset.Location = new System.Drawing.Point(643, 655);
+            this.btnLogReset.Name = "btnLogReset";
+            this.btnLogReset.Size = new System.Drawing.Size(75, 23);
+            this.btnLogReset.TabIndex = 40;
+            this.btnLogReset.Text = "log reset";
+            this.btnLogReset.UseVisualStyleBackColor = true;
+            this.btnLogReset.Click += new System.EventHandler(this.btnLogReset_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(62, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 19);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "브랜드 갯수 설정";
+            // 
+            // tbTotalBrands
+            // 
+            this.tbTotalBrands.Location = new System.Drawing.Point(220, 73);
+            this.tbTotalBrands.Name = "tbTotalBrands";
+            this.tbTotalBrands.Size = new System.Drawing.Size(100, 25);
+            this.tbTotalBrands.TabIndex = 42;
+            // 
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 713);
+            this.Controls.Add(this.tbTotalBrands);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnLogReset);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbSetTotalPlay);
             this.Controls.Add(this.label3);
@@ -385,15 +361,6 @@ namespace bingo
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.lbCheck);
             this.Controls.Add(this.tbBrandNameCheck);
-            this.Controls.Add(this.tb25);
-            this.Controls.Add(this.tb24);
-            this.Controls.Add(this.tb23);
-            this.Controls.Add(this.tb22);
-            this.Controls.Add(this.tb21);
-            this.Controls.Add(this.tb20);
-            this.Controls.Add(this.tb19);
-            this.Controls.Add(this.tb18);
-            this.Controls.Add(this.tb17);
             this.Controls.Add(this.tb16);
             this.Controls.Add(this.tb15);
             this.Controls.Add(this.tb14);
@@ -413,7 +380,7 @@ namespace bingo
             this.Controls.Add(this.btOpenCell);
             this.Controls.Add(this.btNewBoard);
             this.Controls.Add(this.label1);
-            this.Name = "btCopyLog";
+            this.Name = "mainForm";
             this.Text = "Brand Bingo";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -440,16 +407,7 @@ namespace bingo
         private System.Windows.Forms.TextBox tb13;
         private System.Windows.Forms.TextBox tb12;
         private System.Windows.Forms.TextBox tb11;
-        private System.Windows.Forms.TextBox tb20;
-        private System.Windows.Forms.TextBox tb19;
-        private System.Windows.Forms.TextBox tb18;
-        private System.Windows.Forms.TextBox tb17;
         private System.Windows.Forms.TextBox tb16;
-        private System.Windows.Forms.TextBox tb25;
-        private System.Windows.Forms.TextBox tb24;
-        private System.Windows.Forms.TextBox tb23;
-        private System.Windows.Forms.TextBox tb22;
-        private System.Windows.Forms.TextBox tb21;
         private System.Windows.Forms.TextBox tbBrandNameCheck;
         private System.Windows.Forms.Label lbCheck;
         private System.Windows.Forms.Label lbCount;
@@ -461,6 +419,9 @@ namespace bingo
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbSetTotalPlay;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogReset;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tbTotalBrands;
     }
 }
 
